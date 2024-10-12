@@ -1,9 +1,9 @@
 # SQL_MUSIC_STORE_ANALYSIS
-1- Who is the senior most employee based on job title?
+1Q- Who is the senior most employee based on job title?
 
 select * from employee order by levels desc limit 1;
 
-2- Which country have the most invoices?
+2Q- Which country have the most invoices?
 
 select billing_country,count(*) as c 
 from invoice 
@@ -11,13 +11,13 @@ group by billing_country
 order by c desc
 Limit 1
 
-3- What are top 3 Values of total invoice?
+3Q- What are top 3 Values of total invoice?
 	
 select customer_id,total from invoice 
 order by total desc 
 limit 3
 
-4- Which city has the best cutomers? We would like to throw a promotional Music Festival in the city 
+4Q- Which city has the best cutomers? We would like to throw a promotional Music Festival in the city 
    we made the most money. Write a query  that returns one city that has the highest sum of invoice 
    totals.Return both the city name & sum of all invoice totals.
 
@@ -26,7 +26,7 @@ from invoice
 group by billing_city
 order by invoice_total desc
 
-Q5-Who is the best customer?The customer who has spent the most money will be declared the best customer.
+5Q-Who is the best customer?The customer who has spent the most money will be declared the best customer.
    Write a query that returns the person who has spent the most money?
 
 select customer.customer_id,customer.first_name,customer.last_name,sum(invoice.total) as total
@@ -96,8 +96,6 @@ join album alb on alb.album_id = t.album_id
 join best_selling_artist bsa on bsa.artist_id = alb.artist_id
 group by 1,2,3,4
 order by 5 desc;
-
-
 	
 10Q- We want to find out the most popular music Genre for each country.We determine the most popular
      as the genre with the highest amount of purchases.Write a query that returns each country along
