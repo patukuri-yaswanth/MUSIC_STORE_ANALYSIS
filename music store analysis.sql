@@ -35,7 +35,6 @@ group by customer.customer_id
 order by total Desc
 limit 1
 
-__Moderate Question__
 
 6Q- Write query to return the email,first name,last name,and genre of all rock music listners.
 	return your list ordered alphabetically by email staring with A
