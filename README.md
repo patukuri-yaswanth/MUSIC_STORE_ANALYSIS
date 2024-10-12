@@ -1,7 +1,7 @@
 # SQL_MUSIC_STORE_ANALYSIS
 1Q- Who is the senior most employee based on job title?
    select * from employee order by levels desc limit 1;
-
+   
 2Q- Which country have the most invoices?
 
   select billing_country,count(*) as c 
