@@ -3,7 +3,7 @@ __1Q- Who is the senior most employee based on job title?__
 
 select * from employee order by levels desc limit 1;
    
-# 2Q- Which country have the most invoices?
+__2Q- Which country have the most invoices?__
 
   select billing_country,count(*) as c 
   from invoice 
@@ -11,7 +11,7 @@ select * from employee order by levels desc limit 1;
   order by c desc
   Limit 1
 
-# 3Q- What are top 3 Values of total invoice?
+__3Q- What are top 3 Values of total invoice?__
 	
 select customer_id,total from invoice 
 order by total desc 
