@@ -1,8 +1,8 @@
 # SQL_MUSIC_STORE_ANALYSIS
 __1Q- Who is the senior most employee based on job title?__
-'''sql
+```sql
 select * from employee order by levels desc limit 1;
-''' 
+```
 __2Q- Which country have the most invoices?__
 
   select billing_country,count(*) as c 
@@ -10,6 +10,7 @@ __2Q- Which country have the most invoices?__
   group by billing_country 
   order by c desc
   Limit 1
+
 
 __3Q- What are top 3 Values of total invoice?__
 	
